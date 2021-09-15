@@ -1,0 +1,166 @@
+# Liste fonksiyonlari
+
+# dir() ::> Modul ve fonksiyon gibi yapilar hakkinda bizlere bilgi verir. Bu bilgileri
+# print(dir()) ::> Icerisine parametre olarak aldigi yapi hakkindaki bilgileri consol uzerinde liste seklinde gosterir.
+
+ListInfo = dir(list)
+# print(ListInfo)
+
+"""
+['__add__', '__class__', '__contains__', '__delattr__', '__delitem__',
+ '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__',
+ '__getitem__', '__gt__', '__hash__', '__iadd__', '__imul__', '__init__',
+ '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mul__',
+ '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__reversed__',
+ '__rmul__', '__setattr__', '__setitem__', '__sizeof__', '__str__', '__subclasshook__',
+ 'append', 'clear', 'copy', 'count', 'extend', 'index', 'insert', 'pop', 'remove',
+ 'reverse', 'sort']
+"""
+
+# append() ::> liste sonuna eleman ekler.
+
+cities = ['İstanbul' , 'Ankara' , 'İzmir' , 'Bursa']
+
+cities.append("Yalova")
+print(cities) 
+
+cities.append("İzmit")
+print(cities)
+
+# clear() ::> liste elemanlarinin hepsini siler.
+
+cities.clear()
+
+print(cities)
+
+
+Numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Numbers.clear()
+print(Numbers)
+
+
+# copy() ::> kopyalama
+
+Alphabet = ["a" , "b" , "c" , "d"]
+
+# deep copying
+
+# Alphabet2 = Alphabet
+# print(Alphabet2)
+
+# Alphabet.append("e")
+# print(Alphabet)
+# print(Alphabet2)
+
+
+
+# shallow copying
+
+Alphabet2 = Alphabet.copy()
+print(Alphabet2)
+
+Alphabet.append("e")
+
+print("----------------")
+
+print(Alphabet)
+print(Alphabet2)
+
+
+
+# count()
+
+Numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 3, 5, 6, 6, 8, 6, 4]
+
+adet = Numbers.count(0)
+
+print(adet)
+
+
+
+# extend()
+
+a = ["a" , "b" , "c" , "d"]
+b = ["e" , "f" , "g" , "h"]
+
+print(a)
+print(b)
+
+# a.extend(b)
+
+# print(a)
+
+
+print(a + b)
+
+
+# index()
+
+cities = ['İstanbul' , 'Ankara' , 'İzmir' , 'Bursa']
+
+
+indis1 = cities.index("Bursa")
+print(indis1)
+
+print(type(indis1))
+
+
+
+# insert() ::> eklemek
+
+
+cities = ['İstanbul' , 'Ankara' , 'İzmir' , 'Bursa']
+
+cities.insert(3 , "Muğla")
+
+print(cities)
+
+
+# pop(indis)
+cities = ['İstanbul' , 'Ankara' , 'İzmir' , 'Bursa']
+cities.pop(-1)
+print(cities)
+
+
+
+
+# remove() ::> listeden icerisine girilecek olan elemani siler. kaldirir.
+
+cities = ['İstanbul' , 'Ankara' , 'İzmir' , 'Bursa']
+Numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+
+# cities.remove("İzmir")
+# cities.remove("Bursa")
+# cities.remove("Ankara")
+# cities.remove("İstanbul")
+# cities.remove("Bursa")
+
+# print(cities)
+
+
+
+Numbers.remove(8)
+print(Numbers)
+
+
+# reverse() , sort() ::> listeyi tersine cevir , listeyi sirala
+
+Numbers = [2, 5, 4, 9 , 18 , 34 , 1000 , 34 , 6]
+
+Characters = ["g" , "y" , "t" , "a" , "z"]
+
+
+Numbers.sort()
+# print(Numbers)
+
+Characters.sort()
+# print(Characters)
+
+
+# Numbers.reverse()
+# print(Numbers)
+
+Characters.reverse()
+print(Characters)
