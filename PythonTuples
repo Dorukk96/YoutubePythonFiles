@@ -1,0 +1,141 @@
+# Tuples ::> Demet 
+
+# Tuples ::> Immutable                   List ::> Mutable
+
+MyTuple = (1, 4.3 , "Istanbul")
+
+print(type(MyTuple))
+
+
+MyList = [1, 3, 4, 6]
+
+MyTuple2 = (1, 3, 4, 6)
+
+
+# MyTuple2[1] = 9
+# print(MyTuple2)
+
+
+# MyList[1] = 9
+# print(MyList)
+
+
+print(len(MyTuple2))
+
+
+
+# Renk kodlari da Tuple icerisinde tanimlanabilir.
+# RGB : Red , Green , Blue
+WHITE = (255, 255 , 255)
+RED = (255, 0 , 0)
+
+
+
+x = WHITE + RED
+print(len(x))
+
+
+
+print(type(x))
+
+
+
+MYTUPLE = (0 , 2, 4, 6, 8)
+
+
+for i in MYTUPLE:
+    print(i , end=(", "))
+
+
+
+
+tuple1 = (8,)
+tuple2 = (5,)
+
+print(tuple1 + tuple2)
+
+
+# Tuple koordinat tanimlamak icin oldukca etkili bir veri yapisidir.
+Coordinates = (60 , 35)
+
+
+Sehirler = ("Istanbul" , "Izmir" , "Ankara" , "Bursa" , "Yalova")
+
+# Sehirler = list(Sehirler)
+
+
+
+# Sehirler[2] = "Muğla"
+
+
+
+# Sehirler = tuple(Sehirler)
+
+# print(Sehirler)
+
+
+
+Sehirler = list(Sehirler)
+
+Sehirler.append("Balikesir")
+
+Sehirler = tuple(Sehirler)
+
+print(Sehirler)
+
+
+
+
+ilkbesrakam = (0 , 1 , 2, 3, 4, 5)
+
+
+alti = (6,)
+
+
+ilkbesrakam = ilkbesrakam + alti
+print(ilkbesrakam)
+
+
+
+# Tuple icerisindeki elemanlar degiskenler icerisine atanabilir.
+chars = ("a" , "b" , "c" , "d" , "e" , "f" , "g")
+
+x , y , *z , w = chars
+
+print(x)
+print(y)
+print(z)
+print(w)
+
+print(type(w))
+
+
+
+
+# Tuple ifadeleri yan yana yazdirabiliriz.
+RAKAMLAR = (0, 1, 2, 3, 4 ,5, 6, 7, 8, 9)
+
+a = RAKAMLAR * 5
+print(a)
+
+
+print(dir(tuple()))
+
+
+
+RAKAMLAR = (0, 1, 2, 3, 3 , 4 ,5, 6, 7, 8, 9)
+
+
+
+s = RAKAMLAR.count(3)
+print(s)
+
+
+
+i = RAKAMLAR.index(9)
+print(i)
+
+
+
+sonEleman = RAKAMLAR[-11]
+print(sonEleman)
