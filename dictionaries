@@ -1,0 +1,97 @@
+# Dictionaries ::> Sozlukler
+
+
+Sehirler = {
+            'Adana' : "01",
+            'Adiyaman' : "02",
+            'Afyon' : "03",
+            "Agri" : "04",
+            "Amasya" : "05"   
+    }
+
+
+# print(type(Sehirler))
+
+Adana = Sehirler['Adana'] # 01
+
+Adiyaman = Sehirler["Adiyaman"] # 02
+
+print(Adana + Adiyaman)
+
+print(int(Adana) + int(Adiyaman))
+
+
+
+Constants = {
+            "pi" : 3.1415,
+            "e"  : 2.7172,
+            "phi": 0.618
+            }
+
+Toplam = Constants["pi"] + Constants["e"] + Constants["phi"]
+print(Toplam)
+
+
+
+print(type(Toplam))
+
+
+
+Calisanlar = {
+    
+            "Calisan1" : {
+                    "isim" : "Isim1",
+                    "yas"  : 23,
+                    "telefon" : "0349283947584"
+                        },
+            
+            "Calisan2" : {
+                    "isim" : "Isim2",
+                    "yas"  : 25,
+                    "telefon" : "03645947756784"
+                        },
+            
+            "Calisan3" : {
+                    "isim" : "Isim3",
+                    "yas"  : 36,
+                    "telefon" : "035657436784"
+                        }
+    
+    
+    }
+
+
+print(Calisanlar["Calisan1"]["yas"])
+
+
+print(Calisanlar["Calisan3"]["telefon"])
+
+
+Toplam2 = Calisanlar["Calisan1"]["yas"] + Calisanlar["Calisan2"]["yas"] + Calisanlar["Calisan3"]["yas"]
+print(Toplam2)
+
+
+###################################################################
+
+SehirAdi = input("Sehir adini giriniz : ")
+SehirPlakaNo = input("Plaka no giriniz : ")
+Bolgesi = input("Hangi bolgede? : ")
+Yuzolcumu = float(input("Yuzolcumu : "))
+
+
+Sehirler2 = {
+            "Sehir ismi"           : SehirAdi,
+            "Sehir Plaka Numarası" : SehirPlakaNo,
+            "Hangi bolge"          : Bolgesi,
+            "Yuzolcumu"         : Yuzolcumu
+            }
+
+print(Sehirler2)
+
+
+print(Sehirler2["Sehir ismi"])
+
+
+
+for sehir in Sehirler2:
+    print(sehir)
