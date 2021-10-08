@@ -1,0 +1,185 @@
+# dictionaries and lists ::> mutable ::> degistirilebilir.
+
+# tuples and string ::> immutable ::> degistirilemez.
+
+Otomobiller = {
+    "Marka" : "Renault",
+    "Model" : "Clio",
+    "yıl"   : "2021",
+    "Km"    : 12000,
+    "Fiyat" : 190000,
+    }
+
+Uzunluk = len(Otomobiller)
+print(Uzunluk)
+
+""" Dictionaries Methods """
+
+
+# print(dir(dict))
+
+"""
+'clear', 'copy', 'fromkeys', 'get', 'items', 'keys', 'pop',
+'popitem', 'setdefault', 'update', 'values'
+
+"""
+
+# Clear : Temizlemek 
+
+
+# Otomobiller.clear()
+# print(Otomobiller)
+
+#####################################################
+
+# Copy() : Kopyalamak
+# Shallow copying
+
+Otomobiller2 = Otomobiller.copy()
+# print(Otomobiller2)
+
+
+Otomobiller2["yıl"] = "2019"
+print(Otomobiller2)
+print(Otomobiller)
+
+
+
+# deep copying
+
+Otomobiller3 = Otomobiller
+
+Otomobiller3["Km"] = 30000
+
+print(Otomobiller3)
+print(Otomobiller)
+
+
+#####################################################
+
+# fromkeys() ::> Farkli veri tiplerinden sozluk olusturur.
+
+OtomobilListesi = ("Hyundai" , "Mercedes" , "BMW" , "Audi")
+Year = 2016
+
+OtomobilBilgi = dict.fromkeys(OtomobilListesi , Year)
+
+print(OtomobilBilgi)
+print(type(OtomobilBilgi))
+
+
+#####################################################
+
+# get() ::> Herhangi bir key degerini alabiliriz.
+
+
+Otomobiller = {
+    "Marka" : "Renault",
+    "Model" : "Clio",
+    "yıl"   : "2021",
+    "Km"    : 12000,
+    "Fiyat" : 190000,
+    }
+
+
+print(Otomobiller["Model"])
+
+model = Otomobiller.get("Model")
+
+print(model)
+
+
+#####################################################
+
+# items , keys , values
+
+
+x = Otomobiller.items()
+print(x)
+
+y = Otomobiller.keys()
+print(y)
+
+
+z = Otomobiller.values()
+print(z)
+
+#####################################################
+
+# pop() ::> Belirli elemani siler.
+
+Otomobiller = {
+    "Marka" : "Renault",
+    "Model" : "Clio",
+    "yıl"   : "2021",
+    "Km"    : 12000,
+    "Fiyat" : 190000,
+    }
+
+
+Otomobiller.pop("Model")
+Otomobiller.pop("Marka")
+Otomobiller.pop("yıl")
+Otomobiller.pop("Km")
+Otomobiller.pop("Fiyat")
+print(Otomobiller)
+
+
+#####################################################
+
+# popitem() ::> Sozluk icerisindeki son item'i (key & value) siler.
+Otomobiller = {
+    "Marka" : "Renault",
+    "Model" : "Clio",
+    "yıl"   : "2021",
+    "Km"    : 12000,
+    "Fiyat" : 190000,
+    }
+
+Otomobiller.popitem()
+Otomobiller.popitem()
+Otomobiller.popitem()
+Otomobiller.popitem()
+Otomobiller.popitem()
+print(Otomobiller)
+
+
+#####################################################
+
+# setdefault() ::> icerisine aldigi parametreye gore deger dondurur. Eger key yoksa
+#                  o key'i olusturup ikinci parametrede verilen degeri ilgili key'a atar.
+
+Otomobiller = {
+    "Marka" : "Renault",
+    "Model" : "Clio",
+    "yıl"   : "2021",
+    "Km"    : 12000,
+    "Fiyat" : 190000,
+    }
+
+
+x = Otomobiller.setdefault("Fiyat" , 30000)
+print(x)
+
+y = Otomobiller.setdefault("type" , "hatchback")
+print(y)
+
+print(Otomobiller)
+
+
+#####################################################
+
+ # update() ::> Sozluk icerisine yeni item'ler eklemek icin kullanilan method'dur.
+ 
+Otomobiller = {
+    "Marka" : "Renault",
+    "Model" : "Clio",
+    "yıl"   : "2021",
+    "Km"    : 12000,
+    "Fiyat" : 190000,
+    }
+
+
+
+Otomobiller.update({"Renk" : "Beyaz" , "Kazalimi" : False})
+print(Otomobiller) 
