@@ -1,0 +1,148 @@
+# Set ::> Kumeler
+
+Hayvanlar = {"Kopek" , "Kedi" , "Balik" , "Kus" , "Tavsan"}
+
+# print(Hayvanlar)
+# print(type(Hayvanlar))
+# print(len(Hayvanlar))
+
+
+# birinciEleman = Hayvanlar[0]
+# print(birinciEleman)
+
+
+for hayvan in Hayvanlar:
+    print(hayvan)
+    
+Hayvanlar2 = {"Kopek" , "Kedi" , "Balik" , "Kus" , "Tavsan" , "Balik" , "Balik" , "Kopek" , "Kedi"}
+print(len(Hayvanlar2))
+
+
+print(Hayvanlar2)
+
+Rakamlar = {0 , 1 , 2, 3, 4, 5, 6, 7, 8, 9}
+
+SabitSayilar = {3.14 , 2.71}
+
+boolset = {True , False , False , True , False}
+
+karışıkküme = {1 , 2, 3, 4, 5, 6, 3.14 , 2.71, False , True , "Doruk"}
+print(karışıkküme)
+
+
+tuplee = (120 , 240 , 360)
+
+KUME = set(tuplee)
+print(KUME)
+
+print(type(KUME))
+
+
+arabalar_markalari = ["Mercedes" , "BMW" , "Audi" , "Kia" , "Fiat"]
+
+araba_kumesi = set(["Mercedes" , "BMW" , "Audi" , "Kia" , "Fiat"])
+print(araba_kumesi)
+
+
+
+print("Volvo" in araba_kumesi)
+
+isThere = "Fiat" in araba_kumesi
+
+print(isThere)
+
+
+# add() , update() ::> Eleman ekleme , kume guncelleme
+
+araba_kumesi.add("Toyota")
+araba_kumesi.add("Hyundai")
+araba_kumesi.add("Renault")
+araba_kumesi.add("Citroen")
+
+print(len(araba_kumesi))
+
+
+SporArabalar = {"Porsche" , "Lamborghini" , "Ferrari"}
+
+araba_kumesi.update(SporArabalar)
+
+print(araba_kumesi)
+
+
+SporArabalar.update(araba_kumesi)
+print(SporArabalar)
+
+
+# Bir kumeden eleman silmek icin remove() ve discard() methodlari kullanilir.
+ 
+Rakamlar = {0 , 1 , 2, 3, 4, 5, 6, 7, 8, 9}
+
+Rakamlar.discard(6)
+print(Rakamlar)
+
+
+Rakamlar.discard(6)
+print(Rakamlar)
+
+
+Rakamlar.discard(6)
+print(Rakamlar)
+
+Rakamlar.discard(6)
+print(Rakamlar)
+
+Rakamlar.discard(6)
+print(Rakamlar)
+
+
+RAKAMLAR = {0 , 1 , 2, 3, 4, 5, 6, 7, 8, 9}
+
+####################################################
+# pop() , clear() , del ::> Silme islemleri
+
+RAKAMLAR.pop()
+RAKAMLAR.pop()
+RAKAMLAR.pop()
+RAKAMLAR.pop()
+RAKAMLAR.pop()
+RAKAMLAR.pop()
+RAKAMLAR.pop()
+RAKAMLAR.pop()
+RAKAMLAR.pop()
+RAKAMLAR.pop()
+
+print(len(RAKAMLAR))
+
+print(RAKAMLAR)
+
+RAKAMLAR2 = {0 , 1 , 2, 3, 4, 5, 6, 7, 8, 9}
+
+# RAKAMLAR2.clear()
+
+# print(len(RAKAMLAR2))
+# print(RAKAMLAR2)
+
+del RAKAMLAR2
+
+print(RAKAMLAR)
+
+
+###########################################################
+
+# Union() ::> Birlestirmek ::> iki farkli set (kume)'yi farkli bir degisken uzerinde birlestirir.
+
+harfler1 = {"a" , "b" , "c" , "d" , "e" , "f"}
+
+harfler2 = {"g" , "h" , "i" , "j" , "k"}
+
+
+HARFLER = harfler1.union(harfler2)
+
+print(HARFLER)
+
+
+########################################################
+
+
+for sayi_index , sayi in enumerate(HARFLER):
+    print(f"{sayi_index} - ) {sayi}")
