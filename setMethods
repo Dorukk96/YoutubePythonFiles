@@ -1,0 +1,220 @@
+# set methods ::> kume methodlari / fonksiyonlari
+
+print(dir(set()))
+
+setMethods = ['add', 'clear', 'copy', 'difference', 'difference_update',
+ 'discard', 'intersection', 'intersection_update', 'isdisjoint',
+ 'issubset', 'issuperset', 'pop', 'remove', 'symmetric_difference',
+ 'symmetric_difference_update', 'union', 'update']
+
+
+for eleman in setMethods:
+    print(eleman)
+    
+print(len(setMethods))
+    
+    
+    
+Renkler = {"kirmizi" , "mavi" , "sari" , "yesil"} 
+
+print(len(Renkler))   
+
+# add() ::> eklemek
+
+
+Renkler.add("turuncu")
+Renkler.add("siyah")
+Renkler.add("beyaz")
+
+# Renkler.add((255 , 0, 0))
+
+###########################################################
+print(Renkler)
+
+# clear ::> Kumedeki tum elemanlari siler.
+
+
+# Renkler.clear()
+
+# print(Renkler)
+###########################################################
+
+# copy() ::> Sig kopyalama icin kullanilan method
+
+
+Renkler2 = Renkler.copy()
+
+print(Renkler2)
+
+###########################################################
+
+# difference ::> Fark islemi
+
+
+AnaRenkler = {"Kırmızı" , "Mavi" , "Sarı" , "Beyaz"}
+
+AraRenkler = {"Turuncu" , "Mor" , "yeşil" , "Beyaz"}
+
+
+fark = AnaRenkler.difference(AraRenkler)
+print(fark)
+
+fark2 = AraRenkler.difference(AnaRenkler)
+print(fark2)
+
+###########################################################
+# difference_update
+
+
+AnaRenkler = {"Kırmızı" , "Mavi" , "Sarı" , "Beyaz"}
+
+AraRenkler = {"Turuncu" , "Mor" , "yeşil" , "Beyaz"}
+print(AnaRenkler)
+
+
+AnaRenkler.difference_update(AraRenkler)
+
+print(AnaRenkler)
+
+###########################################################
+# discard() :: Listeden eleman cikarir/siler.
+
+
+AnaRenkler = {"Kırmızı" , "Mavi" , "Sarı" , "Beyaz"}
+
+
+AnaRenkler.discard("Mavi")
+AnaRenkler.discard("Kırmızı")
+AnaRenkler.discard("Sarı")
+AnaRenkler.discard("Beyaz")
+AnaRenkler.discard("Beyaz")
+print(AnaRenkler)
+
+###########################################################
+
+# intersection ::> Kesişim (Her iki kumedeki ortak olan elemanlari alir.)
+
+AnaRenkler = {"Kırmızı" , "Mavi" , "Sarı" , "Beyaz"}
+
+AraRenkler = {"Turuncu" , "Mor" , "yeşil" , "Beyaz"}
+
+
+ortakEleman = AnaRenkler.intersection(AraRenkler)
+print(ortakEleman)
+print(AnaRenkler)
+
+###########################################################
+
+# intersection_update() ::> Kesisen elemani orjinal olan kumenin uzerine yazar/Overwrite
+
+AnaRenkler.intersection_update(AraRenkler)
+print(AnaRenkler)
+
+###########################################################
+
+# isdisjoint ::> Ayrik kume / iki kumenin ayrik olup olmadigini boolean ifade olarak bildirir.
+
+
+AnaRenkler = {"Kırmızı" , "Mavi" , "Sarı" , "Beyaz"}
+
+AraRenkler = {"Turuncu" , "Mor" , "yeşil" , "Siyah"}
+
+isdisjoint = AnaRenkler.isdisjoint(AraRenkler)
+
+print(isdisjoint)
+
+
+###########################################################
+
+# issubset ::> altkume / iki kumeden birinin digerinin alt kumesi olup olmadigini boolean olarak bildirir.
+
+A = {"a" , "c" , "f" , "d" , 1 , 4 , 8}
+
+B = {1 , 4 , 8 , "c"}
+
+altkumemi = B.issubset(B)
+print(altkumemi)
+
+
+
+altkume = B.issubset(A)
+print(altkume)
+
+
+###########################################################
+# issuperset
+
+A = {"a" , "c" , "f" , "d" , 1 , 4 , 8}
+
+B = {1 , 4 , 3 , "c"}
+
+
+x = A.issuperset(B)
+print(x)
+
+
+###########################################################
+# pop , remove ::> Listeden eleman siler / cikarir.
+
+A = {"a" , "c" , "f" , "d" , 1 , 4 , 8}
+
+
+A.pop()
+A.pop()
+A.pop()
+A.pop()
+A.pop()
+A.pop()
+A.pop()
+
+print(A)
+
+
+# Remove() methodu
+A = {"a" , "c" , "f" , "d" , 1 , 4 , 8}
+
+A.remove("a")
+A.remove("c")
+print(A)
+
+###########################################################
+
+# symmetric_difference()
+
+
+AnaRenkler = {"Kırmızı" , "Mavi" , "Sarı" , "Beyaz"}
+
+AraRenkler = {"Turuncu" , "Mor" , "yeşil" , "Beyaz"}
+
+simetrik = AnaRenkler.symmetric_difference(AraRenkler)
+print(simetrik)
+
+
+
+# symmetric_difference_update()
+AnaRenkler = {"Kırmızı" , "Mavi" , "Sarı" , "Beyaz"}
+
+AraRenkler = {"Turuncu" , "Mor" , "yeşil" , "Beyaz"}
+
+AnaRenkler.symmetric_difference_update(AraRenkler)
+print(AnaRenkler)
+
+
+###########################################################
+# union , update ::> Birlestirmek , guncellemek
+
+
+
+AnaRenkler = {"Kırmızı" , "Mavi" , "Sarı" , "Beyaz"}
+
+AraRenkler = {"Turuncu" , "Mor" , "yeşil" , "Beyaz"}
+
+unionSet = AnaRenkler.union(AraRenkler)
+print(type(unionSet))
+print(unionSet)
+
+
+AnaRenkler.update(AraRenkler)
+print(AnaRenkler)
+
+###########################################################
