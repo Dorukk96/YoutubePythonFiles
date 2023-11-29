@@ -10,7 +10,6 @@ def http_error(status) -> str:
         case _:
             return "Something's wrong with the internet"
 
-
 # if - else usage
 def http_error_if_else(status) -> str:
     if(status == 400):
@@ -22,11 +21,10 @@ def http_error_if_else(status) -> str:
     else:
         return "Something's wrong with the internet"
 
-# print(f"if error code is 400 : {http_error_if_else(400)}")
-# print(f"if error code is 404 : {http_error_if_else(404)}")
-# print(f"if error code is 418 : {http_error_if_else(418)}")
-# print(f"if error code is 419 : {http_error_if_else(419)}")
-
+print(f"if error code is 400 : {http_error_if_else(400)}")
+print(f"if error code is 404 : {http_error_if_else(404)}")
+print(f"if error code is 418 : {http_error_if_else(418)}")
+print(f"if error code is 419 : {http_error_if_else(419)}")
 
 def http_error2(status) -> str:
     match status:
@@ -40,7 +38,6 @@ def http_error2(status) -> str:
 # print(http_error(419))
 
 # point is an (x, y) tuple
-
 # python -> match Statement
 # java, js, c c++ -> switch statements
 
