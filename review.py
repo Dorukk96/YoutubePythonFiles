@@ -1,11 +1,10 @@
 # OVERVIEW
-
 # Liste methodları (3 questions)
 # fonksiyonlar (2 questions) 1 fonk. - 1 lambda fonk.
 # algoritma (asal sayıları veren / fibonacci sayiları)
 # Dictionaries -> Map (from other programming languages)
 
-# sorting
+# sorting algorithm
 # 3, 5, 6, 1, 9
 # 3, 5, 1, 6, 9
 # 3, 1, 5, 6, 9
